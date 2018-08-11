@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+    <meta name="description" content="WebAgency. Un site sur les services offerts par une agence web, sites, référencement, design, réseaux sociaux ..." />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" />
+    <!-- Favicon, onglet du site -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <title>WEBAGENCY : L'agence de tous vos projets !</title>
+
+    <!-- Twitter Card meta -->
+    <meta name="twitter:card" content="http://www.d-riviere.fr/images/logo.png">
+    <meta name="twitter:site" content="@WebAgency">
+    <meta name="twitter:title" content="WEBAGENCY : L'agence de tous vos projets !">
+    <meta name="twitter:description" content="WebAgency. Un site sur les services offerts par une agence web, sites, référencement, design, réseaux sociaux ...">
+    <meta name="twitter:url" content="http://www.d-riviere.fr/" />
+    <meta name="twitter:domain" content="http://www.d-riviere.fr/" />
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta name="twitter:image:src" content="http://www.d-riviere.fr/images/logo.png">
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="WEBAGENCY : L'agence de tous vos projets !" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.d-riviere.fr/" />
+    <meta property="og:image" content="http://www.d-riviere.fr/images/logo.png" />
+    <meta property="og:description" content="WebAgency. Un site sur les services offerts par une agence web, sites, référencement, design, réseaux sociaux ..." />
+    <meta property="og:site_name" content="WebAgency" />
+
+</head>
+
+<body>
+
+    <!-- Accueil -->
+    <!-- Menu FIXE -->
+    <header id="accueil">
+
+        <div id="logo"></div>
+        <!-- Menu de navigation -->
+        <nav>
+            <label for="menu-mobile" class="menu-mobile">Menu</label>
+            <input type="checkbox" id="menu-mobile" role="button">
+            <!-- Input pour le menu en responsive -->
+            <ul>
+                <li><a href="#ancre_accueil">Accueil</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#projet">Portfolio</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div id="ancre_accueil"></div>
+
+    <!-- Bannière mobile (voir media queries) -->
+    <div id="banniere_mobile">
+        <!-- Slogan de l'agence -->
+        <div class="message_slide">
+            <h1 class="titre_slide"><span class="titre_bleu">WEBAGENCY</span> : L'AGENCE DE TOUS<br> VOS PROJETS !</h1>
+            <p class="texte_slide">Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+            <a href="#service" class="bouton_slide">Plus d'infos</a>
+        </div>
+    </div>
+
+    <!-- Slider -->
+    <div id="carousel-wrapper">
+
+        <span id="item-1"></span>
+        <!-- Pseudo classe :target sur l'ID -->
+        <span id="item-2"></span>
+        <!-- Pseudo classe :target sur l'ID -->
+
+        <!-- Image 1 -->
+        <div class="carousel-item item-1">
+            <!-- Slogan de l'agence -->
+            <div class="message_slide">
+                <h1 class="titre_slide"><span class="titre_bleu">WEBAGENCY</span> : L'AGENCE DE TOUS<br> VOS PROJETS !</h1>
+                <p class="texte_slide">Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+                <a href="#service" class="bouton_slide">Plus d'infos</a>
+            </div>
+            <!-- Flèche -->
+            <a class="arrow arrow-prev" href="#item-2"></a>
+            <a class="arrow arrow-next" href="#item-2"></a>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="carousel-item item-2">
+            <!-- Slogan de l'agence -->
+            <div class="message_slide">
+                <h1 class="titre_slide"><span class="titre_bleu">WEBAGENCY</span> : L'AGENCE DE TOUS<br> VOS PROJETS !</h1>
+                <p class="texte_slide">Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+                <a href="#service" class="bouton_slide">Plus d'infos</a>
+            </div>
+            <!-- Flèche -->
+            <a class="arrow arrow-prev" href="#item-1"></a>
+            <a class="arrow arrow-next" href="#item-1"></a>
+        </div>
+
+    </div>
+
+    <!-- Services -->
+    <section id="service">
+
+        <h2>NOS SERVICES</h2>
+        <!-- Le point bleu entouré de 2 trait -->
+        <div class="decoration">
+            <div class="trait_gauche"></div>
+            <div class="point_bleu"></div>
+            <div class="trait_droit"></div>
+        </div>
+
+        <p id="presentation_service">Chez la <strong>WEBAGENCY</strong> nous vous aidons à réaliser votre site Web de A à Z. De l’élaboration de la maquette au <strong>référencement SEO</strong> jusqu’à la <strong>mise en ligne de votre site</strong>.</p>
+
+        <div id="main_feature">
+            <!-- Image iMac -->
+            <div id="imac"></div>
+            <!-- Présentation des services -->
+            <div id="nos_services">
+
+                <div class="paragraphe">
+                    <!-- Logo UX -->
+                    <div id="logo_ux">
+                        <div class="point_bleu_logo"></div>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="text_services">
+                        <h3 class="titre_service">Expérience utilisateur</h3>
+                        <p>L'<strong>UX design</strong> ou <strong>création d’expérience utilisateur</strong> est, dans le contexte du marketing et commerce digital, la pratique qui consiste à concevoir et optimiser l’expérience utilisateur sur un site web ou une application mobile.</p>
+                    </div>
+                </div>
+
+                <div class="paragraphe">
+                    <!-- Logo UI -->
+                    <div id="logo_ui">
+                        <div class="point_bleu_logo"></div>
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <div class="text_services">
+                        <h3 class="titre_service">Interface utilisateur</h3>
+                        <p>L'<strong>UI Design (interface utilisateur)</strong> permet de rendre l’expérience de navigation la plus intuitive possible via un design fonctionnel.</p>
+                    </div>
+                </div>
+
+                <div class="paragraphe">
+                    <!-- Logo SEO -->
+                    <div id="logo_seo">
+                        <div class="point_bleu_logo3"></div>
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="text_services">
+                        <h3 class="titre_service">Référencement SEO</h3>
+                        <p>Le <strong>référencement naturel ou SEO</strong> désigne l’ensemble des techniques qui consistent à positionner favorablement un site ou un ensemble de pages sur les premiers résultats naturels ou organiques des moteurs de recherche correspondant aux requêtes visées des Internautes.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projet">
+
+        <h2>NOS PROJETS</h2>
+        <div class="decoration">
+            <div class="trait_gauche"></div>
+            <div class="point_bleu"></div>
+            <div class="trait_droit"></div>
+        </div>
+        <p id="presentation_projet"> Découvrez ici les dernières réalisations de nos équipes.</p>
+        <div class="container">
+
+            <!-- Bouton "Tous les projets" -->
+            <input type="radio" id="all_works" name="menu_port" checked="checked" />
+            <label class="all_project" for="all_works"><span id="fleche1"><i class="fas fa-caret-down"></i></span>Tout</label>
+            <!-- Bouton "Créations" -->
+            <input type="radio" id="creative" name="menu_port" />
+            <label class="creation" for="creative"><span id="fleche2"><i class="fas fa-caret-down"></i></span>Créations</label>
+            <!-- Bouton "Maquettes" -->
+            <input type="radio" id="corporate" name="menu_port" />
+            <label class="maquette" for="corporate"><span id="fleche3"><i class="fas fa-caret-down"></i></span>Maquettes</label>
+            <!-- Bouton "Logos" -->
+            <input type="radio" id="portfolio" name="menu_port" />
+            <label class="logo" for="portfolio"><span id="fleche4"><i class="fas fa-caret-down"></i></span>Logos</label>
+
+            <div id="projet_image">
+                <!-- Bloc contenant une image, son overlay et l'icône incluse dans l'overlay -->
+                <div class="tile creative"><img src="images/portfolio/miniature/01.jpg" alt="Visage avec des lunettes sur fond orange">
+                    <div class="eye">
+                        <i class="fas fa-eye"></i>
+                        <!-- Icône de l'overlay "l'oeil" -->
+                    </div>
+                    <div class="overlay">
+                        <div class="text_overlay">
+                            <!-- Texte de l'overlay -->
+                            <h3>Caricature</h3>
+                            <p class="p_overlay">Création d'un site de caricature</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bloc contenant une image, son overlay et l'icône incluse dans l'overlay -->
+                <div class="tile creative"><img src="images/portfolio/miniature/02.jpg" alt="Lapin rose avec des lunettes tennant une bougie sur fond bleu">
+                    <div class="eye">
+                        <i class="fas fa-eye"></i>
+                        <!-- Icône de l'overlay "l'oeil" -->
+                    </div>
+                    <div class="overlay">
+                        <div class="text_overlay">
+                            <!-- Texte de l'overlay -->
+                            <h3>Rabbit Games</h3>
+                            <p class="p_overlay">Application mobile pour les enfants</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bloc contenant une image, son overlay et l'icône incluse dans l'overlay -->
+                <div class="tile portfolio"><img src="images/portfolio/miniature/03.jpg" alt="Logo d'une marque sur fond rouge">
+                    <div class="eye">
+                        <i class="fas fa-eye"></i>
+                        <!-- Icône de l'overlay "l'oeil" -->
+                    </div>
+                    <div class="overlay">
+                        <div class="text_overlay">
+                            <!-- Texte de l'overlay -->
+                            <h3>Original Pompadour</h3>
+                            <p class="p_overlay">Logo de Pompadour</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bloc contenant une image, son overlay et l'icône incluse dans l'overlay -->
+                <div class="tile corporate"><img src="images/portfolio/miniature/04.jpg" alt="Maquette d'un livre vu du dessus">
+                    <div class="eye">
+                        <i class="fas fa-eye"></i>
+                        <!-- Icône de l'overlay "l'oeil" -->
+                    </div>
+                    <div class="overlay">
+                        <div class="text_overlay">
+                            <!-- Texte de l'overlay -->
+                            <h3>Agence d'architecte</h3>
+                            <p class="p_overlay">Création d'un site d'architecte</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bloc contenant une image, son overlay et l'icône incluse dans l'overlay -->
+                <div class="tile corporate"><img src="images/portfolio/miniature/05.jpg" alt="Sac de shopping noir et blanc">
+                    <div class="eye">
+                        <i class="fas fa-eye"></i>
+                        <!-- Icône de l'overlay "l'oeil" -->
+                    </div>
+                    <div class="overlay">
+                        <div class="text_overlay">
+                            <!-- Texte de l'overlay -->
+                            <h3>Zalando</h3>
+                            <p class="p_overlay">Refonte d'un site marchand</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bloc contenant une image, son overlay et l'icône incluse dans l'overlay -->
+                <div class="tile creative"><img src="images/portfolio/miniature/06.jpg" alt="Ville sur fond orange">
+                    <div class="eye">
+                        <i class="fas fa-eye"></i>
+                        <!-- Icône de l'overlay "l'oeil" -->
+                    </div>
+                    <div class="overlay">
+                        <div class="text_overlay">
+                            <!-- Texte de l'overlay -->
+                            <h3>Travel</h3>
+                            <p class="p_overlay">Design d'une agence de voyage</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bloc contenant une image, son overlay et l'icône incluse dans l'overlay -->
+                <div class="tile portfolio"><img src="images/portfolio/miniature/07.jpg" alt="Logo d'une fusée spatiale en train de décoller">
+                    <div class="eye">
+                        <i class="fas fa-eye"></i>
+                        <!-- Icône de l'overlay "l'oeil" -->
+                    </div>
+                    <div class="overlay">
+                        <div class="text_overlay">
+                            <!-- Texte de l'overlay -->
+                            <h3>SpaceX</h3>
+                            <p class="p_overlay">Logo de SpaceX</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bloc contenant une image, son overlay et l'icône incluse dans l'overlay -->
+                <div class="tile corporate"><img src="images/portfolio/miniature/08.jpg" alt="Fourniture de bureau">
+                    <div class="eye">
+                        <i class="fas fa-eye"></i>
+                        <!-- Icône de l'overlay "l'oeil" -->
+                    </div>
+                    <div class="overlay">
+                        <div class="text_overlay">
+                            <!-- Texte de l'overlay -->
+                            <h3>Fnac</h3>
+                            <p class="p_overlay">Refonte du site de la Fnac</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <footer id="footer">
+
+        <h2>NOUS CONTACTER</h2>
+        <!-- Le point bleu entouré de 2 trait -->
+        <div class="decoration">
+            <div class="trait_gauche"></div>
+            <div class="point_bleu"></div>
+            <div class="trait_droit"></div>
+        </div>
+        <p id="texte_contact">Vous avez besoin de plus d'informations ? Contactez-nous !</p>
+        <br>
+
+        <!-- Google Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d41987.545569659465!2d2.349826!3d48.873052!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25+Rue+d&#39;Hauteville%2C+75010+Paris%2C+France!5e0!3m2!1sfr!2sus!4v1521799591645" height="660" style="border:0" allowfullscreen>
+			</iframe>
+
+        <div id="fond_bleu"></div>
+        <!-- Fond bleu transparent sur la carte google -->
+
+        <!-- Formulaire -->
+        <form method="post" action="traitement.php">
+            <fieldset id="formulaire">
+                <!-- Formulaire de contact -->
+                <h3 id="titre_contact">Contact Info</h3>
+                <!-- Titre du fieldset -->
+                <p id="texte_formulaire"><span id="nom_agence">WebAgency SAS</span><br> 25 Rue d'Hauteville 75010 Paris<br> Tel : 01 02 03 04 05</p>
+                <input type="text" name="name" maxlength="50" placeholder="Nom" />
+                <input type="email" name="email" maxlength="50" placeholder="Email" />
+                <input type="text" name="subject" maxlength="50" placeholder="Sujet" />
+                <textarea name="message" maxlength="255" placeholder="Message"></textarea>
+                <input id="btn_envoyer" type="submit" value="Envoyer" />
+            </fieldset>
+        </form>
+
+        <!-- Liens vers les réseaux sociaux -->
+        <div id="reseaux_sociaux">
+            <a href="https://www.facebook.com" title="Visitez notre page Facebook" aria-label="Visitez notre page Facebook"><i class="fab fa-facebook-square logo_reseau" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/?lang=fr" title="Visitez notre page Twitter" aria-label="Visitez notre page Twitter"><i class="fab fa-twitter logo_reseau" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com/discover" title="Visitez notre page Google +" aria-label="Visitez notre page Twitter"><i class="fab fa-google-plus logo_reseau" aria-hidden="true"></i></a>
+            <a href="https://fr.linkedin.com" title="Visitez notre page Linkedin" aria-label="Visitez notre page Twitter"><i class="fab fa-linkedin logo_reseau" aria-hidden="true"></i></a>
+        </div>
+
+    </footer>
+
+</body>
+</html>

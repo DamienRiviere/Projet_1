@@ -1,0 +1,1556 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Open Sans', Verdana, sans-serif;
+}
+
+/************************ Header ************************/
+
+/* Menu fixe */
+header
+{
+	height: 100px;
+	width: 100%;
+	top: 0px;
+	display: -webkit-box;
+  	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	background-color: #FFFFFF;
+	z-index: 3;
+	box-shadow: 0px 0.1px 0.1px #4494BB;
+}
+
+#logo
+{
+	margin-left: 200px;
+	background-image: url(images/logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 260px;
+	height: 100px;
+}
+
+/********* Menu de navigation *********/
+
+nav
+{
+	margin-right: 200px;
+}
+
+nav ul
+{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+nav li
+{
+    list-style-type: none;
+}
+
+nav a
+{
+	font-size: 1em;
+	font-weight: 500;
+	color: #8C8C8C;
+	text-decoration: none;
+	padding: 36px 20px;
+	text-align: center;
+}
+
+nav a:hover
+{
+	border-top: 3px solid #5CADD3;
+	color: #646464;
+}
+
+nav input[type=checkbox] /* Activer seulement en mode responsive */
+{
+    display: none;
+}
+
+nav label               /* Activer seulement en mode responsive */
+{
+    display: none;
+}
+
+#ancre_accueil /* Marge intérieure pour que la bannière ne se retrouve pas sous le menu fixe */
+{
+	width: 100%;
+	padding-top:100px;
+}
+
+#banniere_mobile /* Voir media queries max-width 780px */
+{
+	display: none;	
+}
+
+/************************ Slider ************************/
+
+#carousel-wrapper /* Taille du slider */
+{
+	height: 650px;
+	position:relative;
+	width:100%;
+	z-index: 1;
+}
+
+.carousel-item /* Taille des items contenu dans le slide */
+{
+  	position:absolute;
+  	top:0;
+  	bottom:0;
+  	left:0;
+  	right:0;
+  	padding:25px 50px;
+  	opacity:0;
+  	transition: all 1s ease-in-out;
+  	box-shadow: 0px 3px 0px #4494BB;
+}
+
+.arrow /* Block contenant les flèches */
+{ 
+  	position:absolute;
+  	top:0px;
+  	display:block;
+  	width:50px;
+  	height:100%;
+  	background: url("http://dancort.es/assets/img/css-carousel/carousel-arrow-light.png") 30% 50% / 15px no-repeat;
+  	overflow: hidden;
+}
+
+.arrow-prev	/* Flèche gauche apparence du chevron */
+{
+	left: 0;
+	top: 44%;
+	background-color: rgba(0,0,0,0.5);
+	height: 60px;
+	width: 45px;
+	border-radius: 0% 100% 100% 0%;
+}
+ 
+.arrow-next /* Flèche droite et apparence du chevron */
+{
+    right:0;
+  	top: 44%;
+  	background-color: rgba(0,0,0,0.5);
+  	height: 60px;
+	width: 45px;
+	border-radius: 0% 100% 100% 0%;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+ }
+
+[id^="item"] 
+{
+    display: none;
+}
+
+.item-1 /* Image 1 */
+{ 
+    z-index: 2;
+    opacity: 1;
+  	background:url('images/slider/bg1.jpg') no-repeat center;
+  	background-size: cover;
+  	
+}
+
+.item-2 /* Image 2 */
+{ 
+  	background:url('images/slider/bg2.jpg') no-repeat center;
+ 	background-size: cover;
+}
+
+*:target ~ .item-1 
+{
+    opacity: 0;
+}
+
+#item-1:target ~ .item-1 
+{
+    opacity: 1;
+}
+
+#item-2:target ~ .item-2 
+{
+    z-index: 3;
+    opacity: 1;
+} 
+
+/********* Texte Slider *********/ 
+
+.message_slide
+{
+  	position: absolute;
+  	text-align: left;
+}
+
+.titre_bleu /* Titre WEBAGENCY */
+{
+  	color: #5CADD3;
+}
+
+.titre_slide /* WEBAGENCY : L'AGENCE DE TOUS VOS PROJETS */
+{
+  	text-align: left;
+  	font-size: 2em;
+  	color: white;
+ 	padding-left: 200px;
+ 	padding-top: 180px;
+  	line-height: 40px;
+}
+
+.texte_slide
+{
+	color: #FFFFFF;
+	margin-left: 200px;
+}
+
+.bouton_slide /* Bouton Plus d'info */
+{
+  	background-color: #5CADD3;
+  	color: white;
+  	font-weight: 600;
+  	padding: 10px 10px 10px 10px;
+  	text-decoration: none;
+  	line-height: 60px;
+  	border-radius: 4px;
+  	box-shadow: 0.5px 2px 0px #4494BB; 
+  	margin-left: 200px;
+}
+
+/************************ Section Services ************************/
+
+#service /* Section service */
+{
+	padding-top: 75px;
+	padding-bottom: 75px; 
+}
+
+h2 /* Règle pour tout les titre h2 */
+{
+	text-align: center;
+	font-size: 2em;
+}
+
+#presentation_service /* Première phrase après "NOS SERVICES" */
+{
+	text-align: center;
+	font-size: 1em;
+}
+
+#main_feature /* Contient #imac, #nos_services, .paragraphe, .text_services, #logo_ux, #logo_ui, #logo_seo */
+{
+	display: flex;
+	justify-content: center;
+}
+
+#imac 
+{
+	height: 510px;
+	width: 500px;
+	background-image: url(images/main-feature.png);
+	background-position: center;
+	background-repeat: no-repeat; 
+}
+
+#nos_services
+{
+	width: 50%;
+	margin-left: 30px;
+	font-size: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.paragraphe /* Contient .text_services + logo_XX */
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.text_services /* Texte de présentation de chaque services */
+{
+	margin-left: 30px;
+	text-align: justify;
+}
+
+#logo_ux /* Positionnement logo UX */
+{
+	position: relative;
+	top: 25px;
+}
+
+#logo_ui /* Positionnement logo UI */
+{
+	position: relative;
+	top: 23px;
+}
+
+#logo_seo /* Positionnement logo SEO */
+{
+	position: relative;
+	top: 25px;
+}
+
+/********* Icônes *********/
+
+.fa-chart-line, .fa-cubes, .fa-chart-pie /* Les icones des logo UX, UI et SEO */
+{
+	font-size: 1.5em;
+	color: #5CADD3;
+	border: 1px solid #D7D7D7;
+    border-radius: 50%;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+}
+
+.point_bleu_logo /* Point bleu logo UX et UI */
+{
+	height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    background-color: #5CADD3;
+    position: relative;
+    left: 58px;
+    top: 42px;
+    z-index: 1;
+}
+
+.point_bleu_logo3 /* Point bleu logo SEO */
+{
+	height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    background-color: #5CADD3;
+    position: relative;
+    left: 60px;
+    top: 42px;
+    z-index: 1;
+}
+
+/********* Décoration *********/
+
+.decoration /* Décoration après chaque titre <h2> */
+{
+	display: flex;
+	justify-content: center;
+	margin-top: -10px;
+}
+
+.point_bleu
+{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 5px solid #FFFFFF;
+    background-color: #5CADD3;
+}
+
+.trait_gauche
+{
+    height: 1px;
+    width: 58px;
+    background-color: #8C8C8C;
+    margin-top: 15px;
+}
+
+.trait_droit
+{
+    height: 1px;
+    width: 58px;
+    background-color: #8C8C8C;
+    margin-top: 15px;
+}
+
+/************************ Portfolio ************************/
+
+#projet /* Section  portfolio */
+{
+	padding-top: 75px;
+	padding-bottom: 75px; 
+	background-color: #F5F5F5;
+}
+
+#presentation_projet /* Texte : "Découvrez ici les dernières réalisations de nos équipes" */
+{
+	text-align: center;
+	font-size: 1em;
+    margin-bottom: 30px;
+}
+
+.container /* Contient le menu (label) et les images (.tile) */
+{
+	width: 100%;
+	margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+input[type="radio"] /* Pour enlever les points radio */
+{
+    display:none;
+}
+
+label /* Les boutons de sélections */
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 30px;
+    position: relative;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #8C8C8C;
+  	background: #E5E5E5;
+  	cursor:pointer;
+}
+
+.all_project /* Style bouton "Tous les projets" */
+{
+    border-radius: 3px 0px 0px 3px; 
+    box-shadow: 0.5px 2px 0px #D2D2D2;
+}
+
+.creation /* Style bouton "Créations" */
+{
+    box-shadow: 0.5px 2px 0px #D2D2D2;
+}
+
+.maquette /* Style bouton "Maquettes" */
+{
+    box-shadow: 0.5px 2px 0px #D2D2D2;
+}
+
+.logo /* Style bouton "Logos" */
+{
+    border-radius: 0px 3px 3px 0px;
+    box-shadow: 0.5px 2px 0px #D2D2D2;
+}
+
+#projet_image /* Contient les images */
+{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Bouton Créations */
+
+input[type="radio"][id="creative"]:checked + label /* Apparence bouton une fois checked */
+{
+    background-color: #5CADD3;
+	color: white;
+	box-shadow: 0px 2px 0px #4494BB;
+	font-weight: 600;
+}
+
+input[type="radio"][id="creative"]:checked + label #fleche2 
+{
+    visibility: visible; /* affichage fleches */
+} 
+
+input[type="radio"][id="creative"]:checked ~ #projet_image .corporate, 
+input[type="radio"][id="creative"]:checked ~ #projet_image .portfolio /* Filtre */
+{
+    width:0;
+    height:0;
+    padding:0;
+    margin:0;
+    opacity:0;
+}
+
+/* FIN bouton Créations */
+
+/* Bouton Maquettes */
+
+input[type="radio"][id="corporate"]:checked + label /* Apparence bouton une fois checked */
+{
+    background-color: #5CADD3;
+    color: white;
+    box-shadow: 0px 2px 0px #4494BB;
+    font-weight: 600;
+}
+
+input[type="radio"][id="corporate"]:checked + label #fleche3 
+{
+   visibility: visible; /* affichage fleches */
+}
+
+input[type="radio"][id="corporate"]:checked ~ #projet_image .creative, 
+input[type="radio"][id="corporate"]:checked ~ #projet_image .portfolio /* Filtre */
+{
+    width:0;
+    height:0;
+    padding:0;
+    margin:0;
+    opacity:0;
+}
+
+/* FIN Bouton Maquettes */
+
+/* Bouton Logos */
+
+input[type="radio"][id="portfolio"]:checked + label /* Apparence bouton une fois checked */
+{
+    background-color: #5CADD3;
+	color: white;
+	border-radius: 0px 3px 3px 0px;
+	box-shadow: 0px 2px 0px #4494BB;
+	font-weight: 600;
+}
+
+input[type="radio"][id="portfolio"]:checked + label #fleche4
+{
+    visibility: visible; /* affichage fleches */
+}
+
+input[type="radio"][id="portfolio"]:checked ~ #projet_image .creative, 
+input[type="radio"][id="portfolio"]:checked ~ #projet_image .corporate /* Filtre */
+{
+    width:0;
+    height:0;
+    padding:0;
+    margin:0;
+    opacity:0;
+}
+
+/* FIN Bouton Logos */
+
+/* Bouton Tout */
+
+input[type="radio"][id="all_works"]:checked + label /* Apparence bouton une fois checked */
+{
+    background-color: #5CADD3;
+	color: white;
+	border-radius: 3px 0px 0px 3px; 
+	box-shadow: 0px 2px 0px #4494BB;
+	font-weight: 600;
+}
+
+input[type="radio"][id="all_works"]:checked + label #fleche1
+{
+    visibility: visible; /* affichage fleches */
+}
+
+
+/* FIN Bouton Tout */
+
+.tile /* Block ou sont contenues les images */
+{
+	display: flex;
+    justify-content: flex-end;
+    margin: 10px 10px 10px 10px;
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+/* Icône flèche */
+.fa-caret-down
+{   
+    font-size: 2.3em;
+    color: #468cad;
+}
+
+/* Flèche boutont Tout */
+#fleche1
+{
+    position: absolute;
+    padding: 39px 0 0 0px;
+    visibility: hidden;
+}
+
+/* Flèche boutont Créations */
+#fleche2
+{
+    position: absolute;
+    padding: 39px 0 0 0px;
+    visibility: hidden;
+}
+
+/* Flèche boutont Maquettes */
+#fleche3
+{
+    position: absolute;
+    padding: 39px 0 0 0px;
+    visibility: hidden;
+}
+
+/* Flèche boutont Logos */
+#fleche4
+{
+    position: absolute;
+    padding: 39px 0 0 0px;
+    visibility: hidden;
+}
+
+/**************** Overlay ****************/
+
+.overlay /* Overlay contenu dans les .tiles */
+{
+  	position: absolute;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+	background-color: rgba(0,0,0,0.4);
+  	width: 100%;
+  	height: 35%;
+  	opacity: 0;
+  	overflow: hidden;
+  	z-index: 1;
+}
+
+.tile:hover .overlay /* Pour faire apparaître l'overlay */
+{
+  	opacity: 1;
+  	transition: opacity 500ms ease;
+}
+
+.tile:hover .eye /* Pour faire apparaître l'oeil */
+{
+    opacity: 1;
+  	transition: opacity 500ms ease;
+}
+
+.text_overlay
+{
+    text-align: left;
+    color: white;
+    line-height: 10px;
+    padding-left: 10px;
+    font-size: 0.9em;
+}
+
+/********* Icône fenêtre overlay *********/
+
+.fa-eye /* Style de l'icône */
+{
+    font-size: 1em;
+    background-color: #5CADD3;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+
+.eye /* L'oeil est caché de base, il apparait avec un :hover plus haut */
+{
+    position: absolute;
+    right: 15px;
+    bottom: 50px;  
+    opacity: 0;
+    z-index: 2;
+    cursor:pointer;   
+}
+
+/************************ Contact *************************/
+
+#footer /* Section contact */
+{
+	padding-top: 75px;
+}
+
+#texte_contact /* Vous avez besoin de plus d'informations ? Contactez-nous ! */
+{
+	text-align: center;
+	font-size: 1em;
+}
+
+iframe
+{
+	position: absolute;
+	width: 100%;
+}
+
+#fond_bleu
+{
+	position: relative;
+	width: 100%;
+	height: 660px;
+	background-color: rgba(52,145,178,0.3);
+}
+
+#formulaire
+{
+	position: relative;
+	margin-top: -590px;
+	margin-right: 120px; 
+	float:right;
+	font-size: 1em;
+	background-color: rgba(245,245,245,0.9);
+	width: 320px;
+	height: 490px;
+	padding: 15px 15px 25px 15px;
+	border: 0px;
+	border-radius: 5px;
+	z-index: 2;
+}
+
+input[type="text"], input[type="email"] /* Champs Nom, Email et Sujet */
+{
+	width: 300px;
+	padding: 8px 8px 8px 8px;
+	margin: 5px 0px 5px 0px;
+	font-size: 1em;
+	font-weight: 400;
+	box-shadow: none;
+    border-radius: 5px;
+    border: solid 1px #dcdcdc;
+}
+
+textarea /* Champ message */
+{
+	width: 300px;
+	height: 150px;
+	padding : 8px 8px 8px 8px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em; 
+	font-weight: 400;
+	margin: 5px 0px 5px 0px;
+	box-shadow: none;
+    border-radius: 5px;
+    border: solid 1px #dcdcdc;
+}
+
+#btn_envoyer /* Bouton d'envoie du formulaire */
+{
+	background-color: #5CADD3;
+	color: white;
+	font-weight: 600;
+	margin-top: 3px;
+	padding: 8px 15px 8px 15px;
+	border-radius: 4px;
+	border: 0px;
+	box-shadow: 0.5px 2px 0px #4494BB; 
+}
+
+#nom_agence /* Nom de l'agence "WebAgency SAS" mis en gras */
+{
+	font-weight: bold;
+}
+
+#titre_contact /* Titre <h3> Contact Info */
+{
+	font-size: 1.8em;
+	line-height: 0px;
+}
+
+/* Réseaux sociaux */
+#reseaux_sociaux
+{
+	width: 100%;
+	height: 100px;
+	background-color: #F5F5F5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo_reseau
+{
+	padding: 0 10px 0 10px;
+	font-size: 1.5em;
+	color: #5CADD3;
+	cursor:pointer;
+}
+
+/**********************************************************/
+
+@media screen and (min-width: 2353px) and (max-width: 2560px)
+{
+	label /* Taille plus grande des boutons du menu "Projets" pour les grands écrans */
+	{
+	  	width: 25%;
+	}
+}
+
+@media screen and (max-width: 1100px)
+{
+	/* Positionnement menu navigation */
+	nav
+	{
+		margin-right: 50px;
+	}
+
+	/*Positionnement logo */
+	#logo
+	{
+		margin-left: 50px;	
+	}
+
+	/************** Slider **************/
+	#carousel-wrapper
+	{
+		height: 550px;
+	}
+
+	.titre_slide /* WEBAGENCY : L'AGENCE DE TOUS VOS PROJETS */
+	{
+	  	font-size: 1.8em;
+	  	padding-left: 60px;
+	  	padding-top: 120px;
+	}
+
+	.texte_slide
+	{
+		color: #FFFFFF;
+		margin-left: 60px;
+	}
+
+	.bouton_slide /* Bouton Plus d'info */
+	{
+	  	margin-left: 60px;
+	}
+	/************** FIN Slider **************/
+
+	/************* Nos Services *************/
+	#main_feature
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#imac 
+	{
+		height: 300px;
+		width: 100%;
+	}
+
+	#nos_services
+	{
+		width: 100%;
+		margin-left: 0px;
+	}
+
+	.paragraphe
+	{
+		flex-direction: column;
+		margin-top: 20px;
+	}
+
+	.titre_service
+	{
+		text-align: center;
+	}
+
+	.text_services
+	{
+		margin-left: 10px;
+		margin-right: 10px;
+		text-align: justify;
+	}
+
+	.point_bleu_logo
+	{
+	    left: 72px;
+	    top: 28px;
+	}
+
+	.point_bleu_logo3
+	{
+	    left: 74px;
+	    top: 28px;
+	}
+
+	#logo_ux /* Positionnement logo UX */
+	{
+		display: flex;
+		justify-content: center;
+		position: relative;
+		top: 0px;
+		margin-right: 15px;
+	}
+
+	#logo_ui /* Positionnement logo UI */
+	{
+		display: flex;
+		justify-content: center;
+		position: relative;
+		top: 0px;
+		margin-right: 15px;
+	}
+
+	#logo_seo /* Positionnement logo SEO */
+	{
+		display: flex;
+		justify-content: center;
+		position: relative;
+		top: 0px;
+		margin-right: 15px;
+	}
+	/************* FIN Nos Services *************/
+}
+
+
+@media screen and (max-width: 1024px)
+{
+	header
+	{
+		justify-content: space-around;
+	}
+
+	nav
+	{
+		margin-right: 50px;
+	}
+
+	#logo
+	{
+		margin-left: 50px;	
+	}
+
+	#carousel-wrapper
+	{
+		height: 450px;
+	}
+
+	.arrow-prev
+	{
+		top: 40%;
+	}
+ 
+	.arrow-next
+	{
+  		top: 40%;
+  	}
+
+	.titre_slide /* WEBAGENCY : L'AGENCE DE TOUS VOS PROJETS */
+	{
+	  	font-size: 1.8em;
+	  	padding-left: 50px;
+	  	padding-top: 100px;
+	}
+
+	.texte_slide
+	{
+		color: #FFFFFF;
+		margin-left: 50px;
+	}
+
+	.bouton_slide /* Bouton Plus d'info */
+	{
+	  margin-left: 50px;
+	}
+
+	.container /* Contient le menu et les images */
+	{
+		width: 80%;
+	}
+
+	#formulaire
+	{
+		margin-right: 30px; 
+	}
+}
+
+@media screen and (max-width: 890px)
+{
+	.container /* Contient le menu et les images */
+	{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 780px)
+{
+	/******************* Menu *******************/
+	header
+	{
+		flex-direction: column;
+		height: 100px;
+		box-shadow: 0px 0px 0px #4494BB;
+	}
+
+	#logo
+	{
+		margin: 0 auto;
+		position: absolute;
+		width: 100%;
+		height: 60px;
+		top: 5px;
+	}
+
+	.menu-mobile
+    {
+        display: block; 
+        color: #FFF;
+        background-color: #5CADD3;
+        font-size: 1em;
+        font-weight: 600;
+        text-align: center;
+        width:100%;
+        line-height: 25px;
+        height: 25px;
+        margin:0px;
+        padding: 0px;
+        position: absolute;
+        top: 75px;
+    }
+
+    nav
+    {
+    	background-color: rgb(92,173,211);
+    	width: 100%;
+    	margin-right: 0px;
+    	margin-left: 0px;
+    	margin-top: 200px;
+    }
+
+    nav input[type=checkbox]:checked ~ ul
+	{
+    	display: block;
+	}
+
+    nav ul
+    {
+        display: none;
+    }
+
+    nav ul li, nav ul li a
+    {
+        width: 100%;
+        text-align: center; 
+        padding: 3px 0px 3px 0px;
+        color: white;
+        font-weight: 400;
+        font-size: 1em;
+    }
+
+     nav ul li a, nav ul li:hover a
+    {
+        padding: 3px 100px 3px 100px;
+        border-top: 1px solid white;
+    }
+
+	/********************************************/
+
+	#ancre_accueil
+	{
+		width: 100%;
+		padding-top: 70px;
+	}
+
+	/********************** Bannière mobile **********************/
+	#banniere_mobile
+	{
+		display: block;
+		background-image: url(images/animated-number/bg.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 450px;
+		box-shadow: 0px 3px 0px #4494BB; 
+	}
+
+	.message_slide
+	{
+		display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    position: relative;
+	    flex-wrap: wrap;
+	    text-align: center;
+	    color: #FFFFFF;
+	}
+
+	.titre_slide /* WEBAGENCY : L'AGENCE DE TOUS VOS PROJETS */
+	{
+		text-align: center;
+	  	padding: 0px 0px 0px 0px;
+	  	padding-top: 130px;	
+	}
+
+	.texte_slide
+	{
+		 margin: 0px;
+	}
+
+	.bouton_slide /* Bouton Plus d'info */
+	{ 
+	  	padding: 10px;
+	  	line-height: 15px;
+	  	margin: 0 auto;
+	  	margin-top: 10px;
+	}
+	/********************** FIN Bannière mobile **********************/
+
+	/******************* Slider *******************/
+    #carousel-wrapper
+    {
+    	display: none;
+    }
+    /**********************************************/
+
+    /******************* Nos services *******************/
+
+	#presentation_service /* Première phrase après "NOS SERVICES" */
+	{
+		text-align: center;
+		font-size: 0.9em;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+    #nos_services
+    {
+		font-size: 0.9em;
+    }
+
+	/****************************************************/
+
+    /******************* Projet *******************/
+
+	#presentation_projet /* Texte : "Découvrez ici les dernières réalisations de nos équipes" */
+	{
+		font-size: 0.9em;
+	}
+
+    .container /* Contient le menu et les images */
+	{
+		width: 100%;
+	}
+
+	label /* Les boutons de sélections */
+	{
+	  	width: 15%;
+	  	font-size: 0.9em;
+	}
+
+	.overlay 
+	{
+	  	height: 30%;
+	  	opacity: 1;
+	}
+
+	.tile:hover .overlay
+	{
+  		height: 30%;
+	}
+
+	.text_overlay
+	{
+	    line-height: 10px;
+	    font-size: 0.8em;
+	}
+
+	.fa-eye /* Style de l'icône */
+	{
+    	padding: 8px 8px 8px 8px;
+	}
+
+	.eye /* L'oeil est caché de base, il apparait avec un :hover plus haut */
+	{
+	    bottom: 42px;  
+	    opacity: 1;
+	}
+    /**********************************************/
+
+    /******************* Contact *******************/
+
+    #texte_contact
+	{
+		font-size: 0.9em;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+    iframe /* Google Map */
+    {
+    	height: 400px;
+    }
+
+    #fond_bleu
+	{
+		height: 400px;
+	}
+
+    #formulaire
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0 auto; 
+		width: 100%;
+		height: 100%;
+		float: none;
+		padding: 0px;
+	}
+
+	input[type="text"], input[type="email"] /* Zone Nom, Email, Sujet */
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 60%; 
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	textarea /* Zone Message */
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 60%;
+		height: 150px;
+		margin-left: auto;
+		margin-right: auto; 
+	}
+
+	#btn_envoyer
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		width: 80px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		margin-left: 18.7%;
+	}
+
+
+	#titre_contact
+	{
+		text-align: left;
+		margin-left: 18.7%;
+	}
+
+	#nom_agence
+	{
+		text-align: left;
+	}
+
+	#texte_formulaire
+	{
+		margin-left: 18.7%;
+		text-align: left;
+	}
+
+	#reseaux_sociaux
+	{
+		background-color: #FFFFFF;
+	}
+	/**********************************************/
+}
+/**************************************************************/
+
+@media screen and (max-width: 545px)
+{
+	/******************** Portfolio ********************/
+    
+    #menu_projet
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    label /* Les boutons de sélections */
+	{
+	  	width: 70%;
+	  	font-size: 0.9em;
+	  	margin: 0px;
+	}
+
+	.all_project /* Style bouton "Tous les projets" */
+	{
+	    border-radius: 20px 20px 0px 0px;
+	    border-bottom: 1px solid #D2D2D2;
+	    box-shadow: 0px 0px 0px #D2D2D2;
+	}
+
+	.creation /* Style bouton "Créations" */
+	{
+	    border-radius: 0px 0px 0px 0px;
+	    border-bottom: 1px solid #D2D2D2;
+	    box-shadow: 0px 0px 0px #D2D2D2;
+	}
+
+	.maquette /* Style bouton "Maquettes" */
+	{
+	    border-radius: 0px 0px 0px 0px;
+	    border-bottom: 1px solid #D2D2D2;
+	    box-shadow: 0px 0px 0px #D2D2D2;
+	}
+
+	.logo /* Style bouton "Logos" */
+	{
+	    border-radius: 0px 0px 20px 20px;
+	    box-shadow: 0.5px 2px 0px #D2D2D2;
+	}
+    
+	input[type="radio"][id="creative"]:checked + label /* Apparence une fois le bouton Créations check */
+	{
+		border-radius: 0px 0px 0px 0px;
+	}
+    
+    input[type="radio"][id="creative"]:checked + label #fleche2
+    {
+        visibility: hidden; /* faire disparaitre les fleches */
+    }
+
+	input[type="radio"][id="corporate"]:checked + label /* Apparence une fois le bouton Maquettes check */
+	{
+		 border-radius: 0px 0px 0px 0px;
+	}
+    
+     input[type="radio"][id="corporate"]:checked + label #fleche3
+    {
+        visibility: hidden; /* faire disparaitre les fleches */
+    }
+
+	input[type="radio"][id="portfolio"]:checked + label /* Apparence une fois le bouton  Logos check */
+	{
+		border-radius: 0px 0px 20px 20px;
+	}
+    
+    input[type="radio"][id="portfolio"]:checked + label #fleche4
+    {
+        visibility: hidden; /* faire disparaitre les fleches */
+    }
+
+	input[type="radio"][id="all_works"]:checked + label /* Apparence une fois le bouton  Tous les projets check */
+	{
+		border-radius: 20px 20px 0px 0px;
+	}
+    
+    input[type="radio"][id="all_works"]:checked + label #fleche1
+    {
+        visibility: hidden; /* faire disparaitre les fleches */
+    }
+
+
+	.tile
+    {
+    	margin: 20px 0px 0px 0px;
+    }
+    /******************** FIN Portfolio ********************/
+
+	/************************ Contact ************************/
+    #titre_contact
+	{
+
+		margin-left: 13%;
+	}
+
+	#texte_formulaire
+	{
+		margin-left: 13%;
+	}
+
+    input[type="text"], input[type="email"] /* Zone Nom, Email, Sujet */
+	{
+		width: 70%; 
+	}
+
+	textarea /* Zone Message */
+	{
+		width: 70%;
+	}
+
+	#btn_envoyer
+	{
+		margin-left: 13%;
+	}
+	/************************ Fin Contact ************************/
+}
+
+@media screen and (max-width: 470px)
+{
+
+	#banniere_mobile
+	{
+		height: 400px; 
+	}
+
+	.message_slide
+	{
+		color: #FFFFFF;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	.titre_slide /* WEBAGENCY : L'AGENCE DE TOUS VOS PROJETS */
+	{
+	  	padding-top: 80px;
+	}
+
+     iframe /* Réduit la taille de Google-map */
+    {
+    	height: 350px;
+    }
+
+     #fond_bleu
+	{
+		height: 350px;
+	}
+
+    .tile
+    {
+    	height: auto;
+    }
+
+    .tile img
+    {
+    	width: 100%;
+    	height: 100%;
+    }
+}
+
+@media screen and (max-width: 350px)
+{
+	#imac
+	{
+		background-size: 470px;
+	}
+}
+
+@media screen and (max-width: 310px)
+{
+
+	#logo
+	{
+		background-size: contain;
+	}
+
+    nav ul li a, nav ul li:hover a
+    {
+        padding: 5px 50px 5px 50px;
+        border-top: 1px solid white;
+    }
+
+    .titre_slide /* WEBAGENCY : L'AGENCE DE TOUS VOS PROJETS */
+	{
+		font-size: 1.5em;
+		line-height: 30px;
+		margin-top: 50px; 
+	}
+
+	.texte_slide
+	{
+		font-size: 0.9em;
+		line-height: 20px;
+	}
+
+	#imac /* J'enlève la photo de l'iMac */
+	{
+		display: none;
+	}
+
+	#presentation_projet /* Texte : "Découvrez ici les dernières réalisations de nos équipes" */
+	{
+		font-size: 0.8em;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+    .overlay 
+	{
+	  	height: 30%;
+	}
+
+	.text_overlay
+	{
+	    line-height: 20px;
+	    font-size: 0.8em;
+	    padding-left: 5px;
+	}
+
+	.eye /* L'oeil est caché de base, il apparait avec un :hover plus haut */
+	{
+	    bottom: 0px;  
+	    visibility: hidden;
+	}
+
+	.tile:hover .eye /* Pour faire apparaître l'oeil */
+	{
+    	visibility: hidden;
+	}
+
+	 iframe
+    {
+    	height: 300px;
+    }
+
+     #fond_bleu
+	{
+		height: 300px;
+	}
+
+    .p_overlay
+    {
+    	display: none;
+    }
+
+	input[type="text"], input[type="email"] /* Zone Nom, Email, Sujet */
+	{
+		width: 80%; 
+	}
+
+	textarea /* Zone Message */
+	{
+		width: 80%;
+	}
+
+	#btn_envoyer
+	{
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	#titre_contact
+	{
+		text-align: center;
+		margin-left: 0%;
+	}
+
+	#nom_agence
+	{
+		text-align: center;
+		margin-left: 0%;
+	}
+
+	#texte_formulaire
+	{
+		text-align: center;
+		margin-left: 0%;
+	}
+}
+
+@media screen and (max-width: 280px)
+{
+
+	.text_services
+	{
+		text-align: center;
+	}
+
+	iframe /* J'enlève google map */
+	{
+		display: none;
+	}
+
+	 #fond_bleu
+	{
+		display: none;
+	}
+
+	.titre_slide /* WEBAGENCY : L'AGENCE DE TOUS VOS PROJETS */
+	{
+	  	padding-top: 30px;
+	}
+}
